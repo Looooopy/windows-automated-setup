@@ -8,5 +8,5 @@ if( $major -eq 10)
 }
 else
 {
-  echo $major
+  Write-Host "Windows Major Version: $major"
 }
