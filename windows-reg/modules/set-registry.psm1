@@ -1,8 +1,3 @@
-#$regPath = "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem"
-#$regName = "LongPathsEnabled"
-#$regValue = "0"
-#$regType = "expandstring"
-#$default = $null
 # Binary	      Binary data
 # DWord	        A number that is a valid UInt32
 # ExpandString	A string that can contain environment variables that are dynamically expanded
@@ -50,7 +45,7 @@ function Set-Registry()
 
       IF($regNoneSilent)
       {
-        New-ItemProperty -Path $regPath -Name $regName -Value $regValue -PropertyType $regType -Force        
+        New-ItemProperty -Path $regPath -Name $regName -Value $regValue -PropertyType $regType -Force
       }
       else
       {
