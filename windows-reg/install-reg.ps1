@@ -8,5 +8,5 @@ if( $major -eq 10)
 }
 else
 {
-  echo [environment]::OSVersion.Version.Major
+  echo $major
 }
