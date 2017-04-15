@@ -20,3 +20,7 @@ else
 }
 
 ./windows-reg/install-reg.ps1
+
+# Copy atom proxy that is used from bash on ubuntu on windows to parse filepaths
+$atompath = Split-Path (Get-Command atom).Path
+cp ./tools/AtomProxyCmd/bin/1.0.0.1/* $atompath
