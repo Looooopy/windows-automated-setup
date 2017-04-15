@@ -1,0 +1,5 @@
+* text=auto
+
+*.reg text eol=crlf
+*.sh eol=lf
+.usersettings eol=lf
