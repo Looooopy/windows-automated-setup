@@ -19,6 +19,9 @@ else
   iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 }
 
+CINST Boxstarter
+Import-Module Boxstarter.Chocolatey
+
 ./windows-reg/install-reg.ps1
 
 # Copy atom proxy that is used from bash on ubuntu on windows to parse filepaths
