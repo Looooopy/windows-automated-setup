@@ -32,11 +32,29 @@ Disable-InternetExplorerESC
 Disable-MicrosoftUpdate
 Disable-BingSearch
 
-# Dev things
+# Web browsers
+CINST -y googlechrome
+CINST -y firefox
+CINST -y postman
+
+# Dev tools
 CINST -y git.install
 CINST -y cmder
 CINST -y Atom
+CINST -y docker-for-windows
+CINST -y docker-compose
+CINST -y selenium-chrome-driver
+
+# Install Postman collections...
+# Install Atom plugins...
+# Install cmder settings...
+
+# Dev debug tools
+CINST -y sysinternals
 CINST -y wireshark
+
+# Dev api
+CINST -y dotnetcore
 
 # Dev folders
 New-Item -path "c:\projects\git" -type directory -force
