@@ -35,18 +35,28 @@ Disable-BingSearch
 # Web browsers
 CINST -y googlechrome
 CINST -y firefox
-CINST -y postman
 
 # Dev tools
 CINST -y git.install
 CINST -y cmder
-CINST -y Atom
 CINST -y docker-for-windows
 CINST -y docker-compose
 CINST -y selenium-chrome-driver
 
+CINST -y postman
 # Install Postman collections...
+
+CINST -y Atom
 # Install Atom plugins...
+apm install --quiet markdown-preview-plus   # ctrl-shift-m
+apm install --q git-time-machine            # alt-t
+apm install --q language-powershell
+apm install --q autocomplete-plus
+apm install --q language-elixir
+apm install --q autocomplete-elixir
+
+# Echo shortcut keys in atom...
+
 # Install cmder settings...
 
 # Dev debug tools
