@@ -46,16 +46,58 @@ CINST -y selenium-chrome-driver
 CINST -y postman
 # Install Postman collections...
 
+# -----------------------------------------------------------------------------
+# Atom
+# -----------------------------------------------------------------------------
 CINST -y Atom
-# Install Atom plugins...
-apm install --quiet markdown-preview-plus   # ctrl-shift-m
-apm install --q git-time-machine            # alt-t
-apm install --q language-powershell
-apm install --q autocomplete-plus
-apm install --q language-elixir
-apm install --q autocomplete-elixir
 
-# Echo shortcut keys in atom...
+# -----------------------------------------------------------------------------
+#  Atom plugins
+# -----------------------------------------------------------------------------
+
+# Theme plugins
+apm install seti-ui
+
+# General plugins
+# -----------------------------------------------------------------------------
+apm install --quiet markdown-preview-plus   # ctrl-shift-m
+apm install -q minimap
+apm install -q open-recent
+apm install -q todo-show                    # ctrl-shift-t
+apm install -q rest-client                  #
+apm install -q sorter                       # ctrl-alt-e,natruralsort, use "alt"
+
+# Git plugins
+# -----------------------------------------------------------------------------
+apm install -q git-plus                    # ctrl-shift-h
+apm install -q git-time-machine            # alt-t
+apm install -q merge-conflicts
+
+# Linters plugins
+# -----------------------------------------------------------------------------
+apm install -q linter
+apm install -q linter-jsonlint
+apm install -q LINTER-TSLINT
+apm install -q LINTER-XMLLINT
+apm install -q linter-scalac
+apm install -q linter-pylama
+apm install -q language-csharp
+
+# Autocomplete plugins
+# -----------------------------------------------------------------------------
+apm install -q autocomplete-plus
+apm install -q language-powershell
+apm install -q language-elixir
+apm install -q autocomplete-elixir
+apm install -q Emmet
+apm install -q Pigments
+
+# https://atom.io/packages/sync-settings TODO: Need to setup
+apm install -q sync-settings
+
+# Echo Atom shortcut keys
+# -----------------------------------------------------------------------------
+
 
 # Install cmder settings...
 
