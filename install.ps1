@@ -97,7 +97,6 @@ apm install -q autocomplete-python
 apm install -q autocomplete-elixir
 
 # Programming Language plugins
-apm install -q language-csharp
 apm install -q language-reg
 apm install -q language-c
 apm install -q language-csharp
@@ -118,7 +117,6 @@ apm install -q language-ruby-on-rails
 apm install -q language-shellscript
 apm install -q language-sql
 apm install -q language-yaml
-
 
 # https://atom.io/packages/sync-settings TODO: Need to setup
 apm install -q sync-settings
