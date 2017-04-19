@@ -141,9 +141,9 @@ New-Item -path "c:\projects\visualstudioonline" -type directory -force
 #Dev config
 
 # Copy atom proxy that is used from bash on ubuntu on windows to parse filepaths
-New-Item ./tools/AtomProxyCmd/bin/1.0.0.1/ -ItemType Directory
 $release_version="0.0.1"
 $atomProxyCmdVersion="1.0.0.1"
+New-Item ./tools/AtomProxyCmd/bin/$atomProxyCmdVersion/ -ItemType Directory
 wget "https://github.com/Looooopy/windows-automated-setup/releases/download/$release_version/AtomProxyCmd.exe" -OutFile "./tools/AtomProxyCmd/bin/$atomProxyCmdVersion/AtomProxyCmd.exe"
 wget "https://github.com/Looooopy/windows-automated-setup/releases/download/$release_version/CommandLine.dll" -OutFile "./tools/AtomProxyCmd/bin/$atomProxyCmdVersion//CommandLine.dll"
 $atompath = Split-Path (Get-Command atom).Path
