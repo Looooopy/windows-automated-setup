@@ -63,9 +63,15 @@ apm install seti-ui
 apm install --quiet markdown-preview-plus   # ctrl-shift-m
 apm install -q minimap
 apm install -q open-recent
+apm install -q advanced-open-file           # ctrl-alt-o (Open)
 apm install -q todo-show                    # ctrl-shift-t
 apm install -q rest-client                  #
 apm install -q sorter                       # ctrl-alt-e,natruralsort, use "alt"
+apm install -q character-count              # ctrl-alt-c
+apm install -q editorconfig
+apm install -q hix                          # ctrl-h
+apm install -q pretty-json         # cmd: pretty-json:prettify (Need keybinding)
+apm install -q Pigments
 
 # Git plugins
 # -----------------------------------------------------------------------------
@@ -81,16 +87,38 @@ apm install -q LINTER-TSLINT
 apm install -q LINTER-XMLLINT
 apm install -q linter-scalac
 apm install -q linter-pylama
-apm install -q language-csharp
+apm install -q linter-jshint
 
 # Autocomplete plugins
 # -----------------------------------------------------------------------------
-apm install -q autocomplete-plus
-apm install -q language-powershell
-apm install -q language-elixir
-apm install -q autocomplete-elixir
 apm install -q Emmet
-apm install -q Pigments
+apm install -q autocomplete-plus
+apm install -q autocomplete-python
+apm install -q autocomplete-elixir
+
+# Programming Language plugins
+apm install -q language-csharp
+apm install -q language-reg
+apm install -q language-c
+apm install -q language-csharp
+apm install -q language-elixir
+apm install -q language-gfm
+apm install -q language-go
+apm install -q language-html
+apm install -q language-java
+apm install -q language-javascript
+apm install -q language-json
+apm install -q language-less
+apm install -q language-make
+apm install -q language-perl
+apm install -q language-php
+apm install -q language-powershell
+apm install -q language-ruby
+apm install -q language-ruby-on-rails
+apm install -q language-shellscript
+apm install -q language-sql
+apm install -q language-yaml
+
 
 # https://atom.io/packages/sync-settings TODO: Need to setup
 apm install -q sync-settings
