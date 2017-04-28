@@ -38,6 +38,7 @@ CINST -y firefox
 
 # Dev tools
 CINST -y git.install
+CINST -y hub
 CINST -y cmder
 CINST -y docker-for-windows
 CINST -y docker-compose
@@ -123,6 +124,18 @@ apm install -q sync-settings
 
 # Echo Atom shortcut keys
 # -----------------------------------------------------------------------------
+
+# Powershell config
+$cmd = "Set-Alias git hub"
+if(Test-Path $PROFILE -PathType Leaf)
+{
+  if (-Not (Get-Content $PROFILE | Select-String "$cmd" -quiet -casesensitive) )
+  {
+    Add-Content $PROFILE "`n$cmd"
+  } 
+} else {
+  Add-Content $PROFILE "`n$cmd"
+}
 
 
 # Install cmder settings...
