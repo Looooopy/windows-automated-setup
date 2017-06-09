@@ -154,6 +154,7 @@ New-Item -path "~\.kube\config" -type file -force
 # TODO: Get info from lastpass what should be placed in config
 
 CINST -y minikube
+minikube config set vm-driver hyperv
 
 # Dev folders
 New-Item -path "c:\projects\git" -type directory -force
