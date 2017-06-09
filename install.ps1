@@ -147,7 +147,13 @@ CINST -y wireshark
 # Dev api
 CINST -y dotnetcore
 
+# Dev Kubernetes
 CINST -y kubernetes-cli
+New-Item -path "~\.kube" -type directory -force
+New-Item -path "~\.kube\config" -type file -force
+# TODO: Get info from lastpass what should be placed in config
+
+CINST -y minikube
 
 # Dev folders
 New-Item -path "c:\projects\git" -type directory -force
