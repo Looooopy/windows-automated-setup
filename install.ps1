@@ -147,6 +147,8 @@ CINST -y wireshark
 # Dev api
 CINST -y dotnetcore
 
+CINST -y kubernetes-cli
+
 # Dev folders
 New-Item -path "c:\projects\git" -type directory -force
 New-Item -path "c:\projects\visualstudioonline" -type directory -force
