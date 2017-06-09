@@ -93,6 +93,16 @@ else
   warn ">>>> Already Installed: docker-compose"
 fi
 
+if $( type kubectl | grep -c "$installpath/kubectl" | grep -q "0" ) ; then
+  info "Install latest version of kubectl"
+  kubectl=/tmp/kubectl
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  sudo mv $kubectl $installpath/kubectl
+  sudo chmod +x $installpath/kubectl
+else
+  warn ">>>> Already Installed: kubectl"
+fi
+
 if $( type lpass | grep -c "$installpath2/lpass" | grep -q "0" ) ; then
   info "install lpass-cli"
   install 'openssl libcurl4-openssl-dev libxml2 libssl-dev libxml2-dev pinentry-curses xclip'
