@@ -98,6 +98,7 @@ fi
 
 if $(type zsh | grep -c "$installpath2/zsh" | grep -q "0" ) ; then
   sudo apt-get install zsh
+  chsh -s $(which zsh) # Set as default shell
 else
   warn ">>>> Already Installed: zsh"
 fi
