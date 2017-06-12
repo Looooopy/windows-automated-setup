@@ -11,7 +11,10 @@
 
 installpath=/usr/local/bin
 installpath2=/usr/bin
-
+winuser=XXX #Username
+kubpathwindows=/mnt/c/Users/$winuser/.kube
+#minikubewindows=C:\\Users\\$winuser\\.minikube\\
+#minikubeunix=/mnt/c/Users/$winuser/.minikube/
 
 install() {
   sudo apt-get ---yes --force-yes install $1
@@ -93,12 +96,21 @@ else
   warn ">>>> Already Installed: docker-compose"
 fi
 
+if $(type zsh | grep -c "$installpath2/zsh" | grep -q "0" ) ; then
+  sudo apt-get install zsh
+else
+  warn ">>>> Already Installed: zsh"
+fi
+
 if $( type kubectl | grep -c "$installpath/kubectl" | grep -q "0" ) ; then
   info "Install latest version of kubectl"
   kubectl=/tmp/kubectl
   curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   sudo mv $kubectl $installpath/kubectl
   sudo chmod +x $installpath/kubectl
+  
+  cp $kubpathwindows/config ~/.kube/config
+  #sed -i -e s^$minikubewindows^$minikubeunix^ ~/.kube/config
 else
   warn ">>>> Already Installed: kubectl"
 fi
